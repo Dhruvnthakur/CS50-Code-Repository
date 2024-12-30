@@ -6,7 +6,7 @@ int main(void)
     int n;
     do{
        n = get_int("Height : ");
-    }while(n<0);
+    }while(n<=0);
     int m = n-1;
     for (int i=1; i<=n; i++)
     {
