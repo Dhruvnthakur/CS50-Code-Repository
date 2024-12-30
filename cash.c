@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <cs50.h>
+#include <stdio.h>
 
 int main(void)
 {
@@ -10,25 +10,25 @@ int main(void)
     }
     while (cash < 0);
     int count = 0;
-    while(cash >= 25)
+    while (cash >= 25)
     {
         count++;
-        cash = cash-25;
+        cash = cash - 25;
     }
-    while(cash >= 10)
+    while (cash >= 10)
     {
         count++;
-        cash = cash-10;
+        cash = cash - 10;
     }
-    while(cash >= 5)
+    while (cash >= 5)
     {
         count++;
-        cash = cash-5;
+        cash = cash - 5;
     }
-    while(cash >= 1)
+    while (cash >= 1)
     {
         count++;
-        cash = cash-1;
+        cash = cash - 1;
     }
-    printf("%i\n",count);
+    printf("%i\n", count);
 }
