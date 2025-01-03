@@ -31,7 +31,7 @@ int main(void)
     }
     L = (t-sp)/100.0;
     S = (fs)/100.0 ;
-    index = 0.0588 * L - 0.296 * S - 15.8 ;
+    index = 5.88 * L - 0.296 * S - 15.8 ;
     if(index < 1)
     {
         printf("Before Grade 1\n");
@@ -48,5 +48,5 @@ int main(void)
    // printf("%i\n",fs );
    // printf("%f\n",L );
    // printf("%f\n",S );
-
+   // printf("%i\n",index );
 }
