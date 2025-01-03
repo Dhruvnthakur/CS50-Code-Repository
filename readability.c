@@ -13,8 +13,8 @@ int main(void)
 
     int sp = 0; //number of spaces in 100 words
     int fs = 0; //number of full stops in 100 words
-    int S = 0; //Is the average number of sentences per 100 words in the text
-    int L = 0; //Is the average number of letters per 100 words in the text
+    float S = 0; //Is the average number of sentences per 100 words in the text
+    float L = 0; //Is the average number of letters per 100 words in the text
     int index = 0;
     for(int i = 0 ; i < strlen(c1) && sp<100 ; i++)
     {
@@ -26,8 +26,8 @@ int main(void)
         {
             fs++;
         }
-        L = (i-100)/100;
-        S = (fs)/100 ;
+        L = (i-sp)/100.0;
+        S = (fs)/100.0 ;
     }
     index = 0.0588 * L - 0.296 * S - 15.8 ;
     if(index < 1)
@@ -42,4 +42,9 @@ int main(void)
     {
         printf("Grade %i\n",index);
     }
+    //printf("%i\n",sp );
+//    printf("%i\n",fs );
+//    printf("%f\n",L );
+  //  printf("%f\n",S );
+
 }
