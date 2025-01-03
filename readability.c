@@ -17,7 +17,7 @@ int main(void)
     float S = 0; //Is the average number of sentences per 100 words in the text
     float L = 0; //Is the average number of letters per 100 words in the text
     float index = 0;
-    for(int i = 0 ; i < strlen(c1) && sp < 100 ; i++)
+    for(int i = 0 ; i < strlen(c1) ; i++)
     {
         if(c1[i] == ' ')
         {
