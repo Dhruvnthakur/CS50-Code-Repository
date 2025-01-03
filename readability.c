@@ -27,9 +27,9 @@ int main(void)
         {
             fs++;
         }
-        a++;
+        t++;
     }
-    L = (a-sp)/100.0;
+    L = (t-sp)/100.0;
     S = (fs)/100.0 ;
     index = 0.0588 * L - 0.296 * S - 15.8 ;
     if(index < 1)
