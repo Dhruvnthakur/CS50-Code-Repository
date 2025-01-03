@@ -12,7 +12,7 @@ int main(void)
     strcpy(c1, t1);
 
     int t = 0; // temp variable for calculations
-    int sp = 0; //number of spaces in 100 words
+    float sp = 0; //number of spaces in 100 words
     int fs = 0; //number of full stops in 100 words
     float S = 0; //Is the average number of sentences per 100 words in the text
     float L = 0; //Is the average number of letters per 100 words in the text
