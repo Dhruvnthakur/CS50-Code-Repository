@@ -23,7 +23,7 @@ int main(void)
         {
             sp++;
         }
-        else if(c1[i] == '.')
+        else if(c1[i] == '.' || c1[i] == '?' || c1[i] == '!')
         {
             fs++;
         }
@@ -44,9 +44,9 @@ int main(void)
     {
         printf("Grade %i\n",index);
     }
-    //printf("%i\n",sp );
-//    printf("%i\n",fs );
-//    printf("%f\n",L );
-  //  printf("%f\n",S );
+   // printf("%i\n",sp );
+   // printf("%i\n",fs );
+   // printf("%f\n",L );
+   // printf("%f\n",S );
 
 }
