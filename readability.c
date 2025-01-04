@@ -35,11 +35,11 @@ int main(void)
     L = ((t)/(sp))*100.0 ;
     S = ((fs)/(sp))*100.0 ;
     index = (0.0588 * L)- (0.296 * S) - 15.8 ;
-    if(index < 1)
+    if(index < 1.0)
     {
         printf("Before Grade 1\n");
     }
-    else if(index > 16)
+    else if(index > 16.0)
     {
         printf("Grade 16+\n");
     }
