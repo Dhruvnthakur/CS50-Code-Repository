@@ -16,7 +16,7 @@ int main(void)
     int fs = 0; //number of full stops in 100 words
     float S = 0; //Is the average number of sentences per 100 words in the text
     float L = 0; //Is the average number of letters per 100 words in the text
-    int index = 0;
+    float index = 0;
     for(int i = 0 ; i < strlen(c1) ; i++)
     {
         if(c1[i] == ' ')
@@ -45,7 +45,7 @@ int main(void)
     }
     else
     {
-        printf("Grade %i\n",index);
+        printf("Grade %f\n",index);
     }
    // printf("%i\n",sp );
    // printf("%i\n",fs );
