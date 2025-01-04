@@ -39,70 +39,7 @@ int main(void)
     {
         printf("Before Grade 1\n");
     }
-    else if(index >= 1.0 && index < 1.9)
-    {
-        printf("Grade 1\n");
-    }
-    else if(index >= 1.9 && index < 2.9)
-    {
-        printf("Grade 2\n");
-    }
-    else if(index >= 2.9 && index < 3.9)
-    {
-        printf("Grade 3\n");
-    }
-    else if(index >= 3.9 && index < 4.9)
-    {
-        printf("Grade 4\n");
-    }
-    else if(index >= 4.9 && index < 5.9)
-    {
-        printf("Grade 5\n");
-    }
-    else if(index >= 5.9 && index < 6.9)
-    {
-        printf("Grade 6\n");
-    }
-    else if(index >= 6.9 && index < 7.9)
-    {
-        printf("Grade 7\n");
-    }
-    else if(index >= 7.9 && index < 8.9)
-    {
-        printf("Grade 8\n");
-    }
-    else if(index >= 8.9 && index < 9.9)
-    {
-        printf("Grade 9\n");
-    }
-    else if(index >= 9.9 && index < 10.9)
-    {
-        printf("Grade 10\n");
-    }
-    else if(index >= 10.9 && index < 11.9)
-    {
-        printf("Grade 11\n");
-    }
-    else if(index >= 11.9 && index < 12.9)
-    {
-        printf("Grade 12\n");
-    }
-    else if(index >= 12.9 && index < 13.9)
-    {
-        printf("Grade 13\n");
-    }
-    else if(index >= 13.9 && index < 14.9)
-    {
-        printf("Grade 14\n");
-    }
-    else if(index >= 14.9 && index < 15.9)
-    {
-        printf("Grade 15\n");
-    }
-    else if(index >= 15.9 && index <= 16.0)
-    {
-        printf("Grade 16\n");
-    }
+    
     else if(index > 16.0)
     {
         printf("Grade 16+\n");
