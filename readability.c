@@ -14,9 +14,6 @@ int main(void)
     int t = 0; // temp variable for calculations
     int sp = 1; //number of spaces in 100 words
     int fs = 0; //number of full stops in 100 words
-    float S = 0; //Is the average number of sentences per 100 words in the text
-    float L = 0; //Is the average number of letters per 100 words in the text
-    int index = 0;
     for(int i = 0 ; i < strlen(c1) ; i++)
     {
         if(c1[i] == ' ')
@@ -32,9 +29,13 @@ int main(void)
             t++;
         }
     }
-    L = (float)t / (float) sp * 100.0 ;
-    S = (float)fs / (float) sp * 100.0 ;
-    index = round((0.0588 * L)- (0.296 * S) - 15.8) ;
+
+    float L = (float)t / (float) sp * 100.0 ;
+
+    float S = (float)fs / (float) sp * 100.0 ;
+
+    int index = round((0.0588 * L)- (0.296 * S) - 15.8) ;
+
     if(index < 1)
     {
         printf("Before Grade 1\n");
@@ -46,11 +47,7 @@ int main(void)
     }
     else
     {
-        printf("Grade %i\n",index);
+        printf("Grade %i\n", index);
     }
-   // printf("%i\n",sp );
-   // printf("%i\n",fs );
-   // printf("%f\n",L );
-   // printf("%f\n",S );
-   // printf("%i\n",index );
+
 }
