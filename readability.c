@@ -7,7 +7,7 @@
 int main(void)
 {
     string t1 = get_string("Text :");
-    char c1[20];
+    char c1[100];
     strcpy(c1, t1);
     int t = 0; // temp variable for calculations
     int sp = 1; //number of spaces in 100 words
