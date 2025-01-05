@@ -2,19 +2,28 @@
 #include <ctype.h>
 #include <math.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 int key(int n);
 char *ciphertext(char arr[], int n);
 
-int main(void)
+int main(int argc, string argv[])
 {
-    int n;
-    do
+    if (argc!=2)
     {
-        n = get_int("key :");
+        printf("Usage:./caesar key\n");
+        return 1;
     }
-    while (n < 0);
+    for(int i = 0; i<strlen(argv[1]);i++)
+    {
+        if(isdigit(argv[1][i]))
+        {
+            printf("Usage:./caesar key\n");
+            return 1;
+        }
+    }
+    int n = atoi(argv[1]);
 
     string t = get_string("plaintext:");
     char pt[100];
