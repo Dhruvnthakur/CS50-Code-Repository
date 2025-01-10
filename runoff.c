@@ -127,21 +127,28 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-     for (int i = 0; i < voter_count; i++)
-    {
-
-        // Query for each rank
-        for (int j = 0; j < candidate_count; j++)
+    if (strcmp(name, candidates[voter].name) == 0)
         {
-            if (strcmp(name, candidates[i].name) == 0)
-            {
-                candidates[i].votes++;
-                preferences[i][j]=j+1;
-                return true;
-            }
-
+            candidates[voter].votes++;
+            preferences[voter][rank]=rank+1;
+            return true;
         }
-    }
+
+   // for (int i = 0; i < voter_count; i++)
+   // {
+   //
+   //     // Query for each rank
+   //     for (int j = 0; j < candidate_count; j++)
+   //     {
+   //         if (strcmp(name, candidates[i].name) == 0)
+   //         {
+   //             candidates[i].votes++;
+   //             preferences[i][j]=j+1;
+   //             return true;
+   //         }
+
+   //     }
+   // }
 
     return false;
 }
