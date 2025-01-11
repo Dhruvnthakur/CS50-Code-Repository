@@ -166,31 +166,25 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    int maxvotes = 0;
     for (int i = 0; i < candidate_count; i++)
     {
-        while (candidates[i].votes > maxvotes)
-        {
-            maxvotes++;
-        }
-    }
-    for (int i = 0; i < candidate_count; i++)
-    {
-        if (candidates[i].votes == maxvotes)
+        if (candidates[i].votes > voter_count/2)
         {
             printf("%s\n", candidates[i].name);
+            return true
         }
     }
+
     return false;
 }
 
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    int minvotes;
+    int minvotes = voter_count;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes < minvotes)
+        if (candidates[i].votes < minvotes && candidates[i].eliminated == false)
         {
             minvotes = candidates[i].votes;
         }
