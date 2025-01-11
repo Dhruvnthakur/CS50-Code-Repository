@@ -136,8 +136,6 @@ bool vote(int voter, int rank, string name)
 
     for (int i = 0; i < voter_count; i++)
     {
-
-        // Query for each rank
         for (int j = 0; j < candidate_count; j++)
         {
             if (strcmp(name, candidates[i].name) == 0)
@@ -149,8 +147,6 @@ bool vote(int voter, int rank, string name)
         }
     }
     return false;
-
-
 }
 
 // Tabulate votes for non-eliminated candidates
