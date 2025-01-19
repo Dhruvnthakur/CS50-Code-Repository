@@ -38,28 +38,18 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     for(int i=0 ; i < height ; i++)
     {
-        if (width % 2 == 1)
-        {
-            int x = round(width/2);
-            for(int j=0 ; j <= x ; j++)
-            {
-                int k = width - j + 1;
-                RGBTRIPLE a = image[i][j];
-                image[i][j] = image[i][k];
-                image[i][k] = a;
 
-            }
-        }
-        if (width % 2 == 0)
+        int x = round(width/2);
+        for(int j=0 ; j <= x ; j++)
         {
-            int x = round(width/2);
-            for(int j=0 ; j < x ; j++)
-            {
-                int k = width - j + 1;
-                RGBTRIPLE a = image[i][j];
-                image[i][j] = image[i][k];
-                image[i][k] = a;
-            }
+            int k = width - j + 1;
+            RGBTRIPLE a = image[i][j];
+            image[i][j] = image[i][k];
+            image[i][k] = a;
+
+        }
+
+        
         }
     }
     return;
