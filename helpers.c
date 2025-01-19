@@ -10,7 +10,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             float a = image[i][j].rgbtRed;
             float b = image[i][j].rgbtBlue;
             float c = image[i][j].rgbtGreen;
-            float s = (a+b+c)/3.0;
+            int s = round((a+b+c)/3.0);
             image[i][j].rgbtRed = s;
             image[i][j].rgbtBlue = s;
             image[i][j].rgbtGreen = s;
