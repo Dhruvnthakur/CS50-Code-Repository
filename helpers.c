@@ -44,15 +44,10 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             for(int j=0 ; j <= x ; j++)
             {
                 int k = width - j + 1;
-                int a = image[i][j].rgbtRed;
-                image[i][j].rgbtRed = image[i][k].rgbtRed;
-                image[i][k].rgbtRed = a;
-                int b = image[i][j].rgbtBlue;
-                image[i][j].rgbtBlue = image[i][k].rgbtBlue;
-                image[i][k].rgbtBlue = b;
-                int c = image[i][j].rgbtGreen;
-                image[i][j].rgbtGreen = image[i][k].rgbtGreen;
-                image[i][k].rgbtGreen = c;
+                RGBTRIPLE a = image[i][j];
+                image[i][j] = image[i][k];
+                image[i][k] = a;
+
             }
         }
         if (width % 2 == 0)
@@ -61,17 +56,10 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             for(int j=0 ; j < x ; j++)
             {
                 int k = width - j + 1;
-                int a = image[i][j].rgbtRed;
-                image[i][j].rgbtRed = image[i][k].rgbtRed;
-                image[i][k].rgbtRed = a;
-                int b = image[i][j].rgbtBlue;
-                image[i][j].rgbtBlue = image[i][k].rgbtBlue;
-                image[i][k].rgbtBlue = b;
-                int c = image[i][j].rgbtGreen;
-                image[i][j].rgbtGreen = image[i][k].rgbtGreen;
-                image[i][k].rgbtGreen = c;
+                RGBTRIPLE a = image[i][j];
+                image[i][j] = image[i][k];
+                image[i][k] = a;
             }
-
         }
     }
     return;
