@@ -38,18 +38,37 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     for(int i=0 ; i < height ; i++)
     {
-        for(int j=0 ; j < round(width/2) ; j++)
+        if (width % 2 == 1)
         {
-            int k = width - j + 1;
-            int a = image[i][j].rgbtRed;
-            image[i][j].rgbtRed = image[i][k].rgbtRed;
-            image[i][k].rgbtRed = a;
-            int b = image[i][j].rgbtBlue;
-            image[i][j].rgbtBlue = image[i][k].rgbtBlue;
-            image[i][k].rgbtBlue = b;
-            int c = image[i][j].rgbtGreen;
-            image[i][j].rgbtGreen = image[i][k].rgbtGreen;
-            image[i][k].rgbtGreen = c;
+            for(int j=0 ; j <= round(width/2) ; j++)
+            {
+                int k = width - j + 1;
+                int a = image[i][j].rgbtRed;
+                image[i][j].rgbtRed = image[i][k].rgbtRed;
+                image[i][k].rgbtRed = a;
+                int b = image[i][j].rgbtBlue;
+                image[i][j].rgbtBlue = image[i][k].rgbtBlue;
+                image[i][k].rgbtBlue = b;
+                int c = image[i][j].rgbtGreen;
+                image[i][j].rgbtGreen = image[i][k].rgbtGreen;
+                image[i][k].rgbtGreen = c;
+            }
+        }
+        if (width % 2 == 0)
+        {
+            for(int j=0 ; j < round(width/2) ; j++)
+            {
+                int k = width - j + 1;
+                int a = image[i][j].rgbtRed;
+                image[i][j].rgbtRed = image[i][k].rgbtRed;
+                image[i][k].rgbtRed = a;
+                int b = image[i][j].rgbtBlue;
+                image[i][j].rgbtBlue = image[i][k].rgbtBlue;
+                image[i][k].rgbtBlue = b;
+                int c = image[i][j].rgbtGreen;
+                image[i][j].rgbtGreen = image[i][k].rgbtGreen;
+                image[i][k].rgbtGreen = c;
+            }
 
         }
     }
