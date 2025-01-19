@@ -38,7 +38,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     for(int i=0 ; i < height ; i++)
     {
-        for(int j=0 ; j < width/2 ; j++)
+        for(int j=0 ; j < round(width/2) ; j++)
         {
             int k = width - j + 1;
             int a = image[i][j].rgbtRed;
