@@ -40,7 +40,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
 
         int x = round(width/2);
-        for(int j=0 ; j <= x ; j++)
+        for(int j=0 ; j < x ; j++)
         {
             int k = width - j + 1;
             RGBTRIPLE a = image[i][j];
@@ -49,8 +49,8 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 
         }
 
+
         
-        }
     }
     return;
 }
