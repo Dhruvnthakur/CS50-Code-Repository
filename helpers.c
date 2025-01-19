@@ -40,7 +40,12 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         for(int j=0 ; j<width ; j++)
         {
-
+            float a = image[i][j].rgbtRed;
+            float b = image[i][j].rgbtBlue;
+            float c = image[i][j].rgbtGreen;
+            image[i][width-j+1].rgbtRed = a;
+            image[i][width-j+1].rgbtBlue = b;
+            image[i][width-j+1].rgbtGreen = c;
         }
     }
     return;
