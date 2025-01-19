@@ -40,7 +40,8 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         if (width % 2 == 1)
         {
-            for(int j=0 ; j <= round(width/2) ; j++)
+            int x = round(width/2);
+            for(int j=0 ; j <= x ; j++)
             {
                 int k = width - j + 1;
                 int a = image[i][j].rgbtRed;
@@ -56,7 +57,8 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         }
         if (width % 2 == 0)
         {
-            for(int j=0 ; j < round(width/2) ; j++)
+            int x < round(width/2);
+            for(int j=0 ; j <  ; j++)
             {
                 int k = width - j + 1;
                 int a = image[i][j].rgbtRed;
