@@ -68,18 +68,46 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for(int j=0 ; j<width ; j++)
         {
             copy[i][j] = image[i][j];
-            float a = copy[i-1][j+1];
-            float b = copy[i][j+1];
-            float c = copy[i+1][j+1];
-            float d = copy[i-1][j];
-            float e = copy[i][j];
-            float f = copy[i+1][j];
-            float g = copy[i-1][j-1];
-            float h = copy[i][j-1];
-            float l = copy[i+1][j-1];
-            int sum = (a+b+c+d+e+f+g+h+l)/9;
-            image[i][j] = sum;
+
         }
     }
+    for(int i=0 ; i< height ; i++)
+    {
+        for(int j=0 ; j<width ; j++)
+        {
+            int TR = 0 , TB = 0 , TG = 0 ;
+            float counter = 0.0;
+            for(int x = -1 ;  x<2 ; x++)
+            {
+                for(int y = -1 ;  y < 2 ; y++)
+                {
+                    int cx = i + x;
+                    int cy = i + y;
+
+                    if(cx < 0 || cx > (height -1) || cy < 0 || cy > (width - 1))
+                    {
+                        continue;
+                    }
+
+                    TR += image[cx][cy].rgbtRed;
+                    TB += image[cx][cy].rgbtBlue;
+                    TG += image[cx][cy].rgbtGreen;
+
+                    counter++;
+                }
+            }
+            copy[i][j].rgbtRed = round(TR/counter);
+            copy[i][j].rgbtBlue = round(TB/counter);
+            copy[i][j].rgbtGreen = round(TG/counter);
+        }
+    }
+    for(int i=0 ; i< height ; i++)
+    {
+        for(int j=0 ; j<width ; j++)
+        {
+            image[i][j] = copy[i][j] ;
+        }
+    }
+
     return;
 }
