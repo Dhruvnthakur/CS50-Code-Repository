@@ -30,9 +30,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             float originalRed = image[i][j].rgbtRed;
             float originalBlue = image[i][j].rgbtBlue;
             float originalGreen = image[i][j].rgbtGreen;
-            int sepiaRed = (0.393 * originalRed + 0.769 * originalGreen + 0.189 * originalBlue);
-            int sepiaGreen = (0.349 * originalRed + 0.686 * originalGreen + 0.168 * originalBlue);
-            int sepiaBlue = (0.272 * originalRed + 0.534 * originalGreen + 0.131 * originalBlue);
+            int sepiaRed = round(0.393 * originalRed + 0.769 * originalGreen + 0.189 * originalBlue);
+            int sepiaGreen = round(0.349 * originalRed + 0.686 * originalGreen + 0.168 * originalBlue);
+            int sepiaBlue = round(0.272 * originalRed + 0.534 * originalGreen + 0.131 * originalBlue);
             image[i][j].rgbtRed = sepiaRed;
             image[i][j].rgbtBlue = sepiaBlue;
             image[i][j].rgbtGreen = sepiaGreen;
