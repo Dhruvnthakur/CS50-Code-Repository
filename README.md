@@ -32,7 +32,8 @@ Ciphertext: B C D E ...
 ### Terminal Input
 
 ./caesar 5
+
 plaintext: CS50 is cool!
+
 ciphertext: HX50 nx httq!
-./caesar 2
-plaintext: Hello, CS50!
+
