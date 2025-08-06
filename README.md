@@ -9,7 +9,11 @@ The user is prompted to enter a positive integer (height), and the program print
 ## Example Output
 
 If the user inputs `4`, the output will be:
+
 `   #`
-`\  ##`
-`\ ###`
-`\####`
+
+`  ##`
+
+` ###`
+
+`####`
