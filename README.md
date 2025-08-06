@@ -18,3 +18,14 @@ Converts each pixel to grayscale by averaging the red, green, and blue values.
 **Formula**:
 ```c
 gray = round((red + green + blue) / 3.0)
+```
+### 2. 🟤 Sepia
+
+Applies a vintage-style sepia filter using a weighted formula.
+
+**Formula**:
+```c
+sepiaRed = 0.393*R + 0.769*G + 0.189*B
+sepiaGreen = 0.349*R + 0.686*G + 0.168*B
+sepiaBlue = 0.272*R + 0.534*G + 0.131*B
+```
