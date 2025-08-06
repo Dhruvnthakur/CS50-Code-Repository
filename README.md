@@ -29,3 +29,14 @@ sepiaRed = 0.393*R + 0.769*G + 0.189*B
 sepiaGreen = 0.349*R + 0.686*G + 0.168*B
 sepiaBlue = 0.272*R + 0.534*G + 0.131*B
 ```
+### 3. 🔁 Reflect
+Reflects the image horizontally by swapping pixels across the vertical centerline of each row.
+
+### 4. 💧 Blur
+Applies a box blur by averaging the color values of a 3×3 box centered on each pixel.
+
+Uses a copy of the original image to avoid modifying the input during processing.
+
+Averages color values of valid neighboring pixels.
+
+Handles edge and corner cases properly.
