@@ -15,6 +15,3 @@ CS50 is an entry-level course that covers foundational computer science concepts
 - Flask
 
 ---
-
-## 📁 Repository Structure
-
